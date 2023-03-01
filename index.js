@@ -140,7 +140,7 @@ function startEmployeeTracker() {
 
 //view all employees 
 function viewingAllEmployees() {
-    
+    dbConnect.query(``)
 }
 
 //viewing employees by their managers
@@ -165,7 +165,12 @@ function updateEmployeeRole() {
 
 //viewing all departments
 function viewAllDepartments() {
-    
+    dbConnect.query(`SELECT * FROM department`, (err, result) => {
+        if (err) throw err;
+        console.log("Departments \n: ");
+        console.table(result);
+        startEmployeeTracker();
+    })
 }
 
 //adding a department
@@ -174,7 +179,17 @@ function addDepartment() {
 }
 
 function viewAllRoles() {
-    
+    dbConnect.query(
+        `SELECT role.id, role.title, role.salary, department.name
+        AS department
+        FROM role 
+        LEFT JOIN department 
+        ON role.department_id = department.id
+    `, (err, result) => {
+        console.log("Roles: \n: ");
+        console.table(result);
+        startEmployeeTracker();
+    });
 }
 
 function addRole() {
