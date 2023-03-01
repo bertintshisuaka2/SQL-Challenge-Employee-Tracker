@@ -1,9 +1,34 @@
 const inquirer = require("inquirer");
-// const dbConnect = require("./db/connection");
+const dbConnect = require("./db/connection");
 require("console.table");
 
-//first connecting to the database, and then starting the question prompts
 
+//first connecting to the database, and then starting the question prompts
+dbConnect.connect(err => {
+    if (err) throw err;
+    console.log("Employee Tracker Database Connected")
+
+    console.log(`
+    ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ 
+  |___|___|___|___|___|___|___|___|___|___|___|___|
+                                                    
+     _____           _                             
+    |   __|_____ ___| |___ _ _ ___ ___             
+    |   __|     | . | | . | | | -_| -_|            
+    |_____|_|_|_|  _|_|___|_  |___|___|            
+                |_|       |___|                    
+                                                   
+     _____             _                           
+    |_   _|___ ___ ___| |_ ___ ___                 
+      | | |  _| .'|  _| '_| -_|  _|                
+      |_| |_| |__,|___|_,_|___|_|                  
+                                           
+ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___   
+|___|___|___|___|___|___|___|___|___|___|___|___|
+       `)
+
+       startEmployeeTracker();
+});
 
 //question prompts
 function startEmployeeTracker() {
@@ -25,7 +50,8 @@ function startEmployeeTracker() {
             "Delete A Role", 
             "Delete An Employee",
             "View Department Budget",
-            "All Done."
+            "All Done \n" +
+            "-----------------------------"
         ]
     }])
     .then(function ({action}) {
