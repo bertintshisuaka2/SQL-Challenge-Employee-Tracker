@@ -138,6 +138,11 @@ function startEmployeeTracker() {
  * Functions for all the different selections from the user
  */
 
+//view all employees 
+function viewingAllEmployees() {
+    
+}
+
 //viewing employees by their managers
 function employeesByManager() {
 
