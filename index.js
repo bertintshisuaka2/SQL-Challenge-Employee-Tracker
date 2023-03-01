@@ -1,5 +1,5 @@
 const inquirer = require("inquirer");
-const dbConnect = require("./db/connection");
+// const dbConnect = require("./db/connection");
 require("console.table");
 
 //first connecting to the database, and then starting the question prompts
@@ -7,10 +7,10 @@ require("console.table");
 
 //question prompts
 function startEmployeeTracker() {
-    inquirer.prompt({
+    inquirer.prompt([{
         type: "list",
         name: "action",
-        mesage: "Select which action you would like to perform today: ",
+        message: "Select which action you would like to perform today: ",
         choices: [
             "View All Employess",
             "View All Employees By Manager",
@@ -25,9 +25,9 @@ function startEmployeeTracker() {
             "Delete A Role", 
             "Delete An Employee",
             "View Department Budget",
-            "All Done"
+            "All Done."
         ]
-    })
+    }])
     .then(function ({action}) {
         switch (action) {
             case "View All Employess":
