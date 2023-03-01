@@ -108,3 +108,56 @@ function startEmployeeTracker() {
 }
 
 //all the functions for the different selections
+
+let viewingAllEmployees = emplyees() {
+
+}
+
+//viewing employees by their managers
+function employeesByManager() {
+
+}
+
+//viewing employees by their department
+function employeesByDepartment() {
+    
+}
+
+//adding an employee
+function addingEmployee() {
+    
+}
+
+//updating an employee's role
+function updateEmployeeRole() {
+    
+}
+
+//viewing all departments
+function viewAllDepartments() {
+    
+}
+
+function viewAllRoles() {
+    
+}
+
+function addRole() {
+    
+}
+
+function deleteDepartment() {
+    
+}
+
+function deleteRole() {
+    
+}
+
+function deleteEmployee() {
+    
+}
+
+function departmentBudget() {
+    
+}
