@@ -1,7 +1,7 @@
 const mysql = require("mysql");
 
 //mysql connection
-const connection = mysql.createConnection({
+const dbConnect = mysql.createConnection({
     host: 'localhost',
 
     // Your port; if not 3306
@@ -17,4 +17,4 @@ const connection = mysql.createConnection({
 console.log("-----!!Now Connected To 'employeeTracker' Database!!-----")
 );
 
-module.exports = connection;
+module.exports = dbConnect;

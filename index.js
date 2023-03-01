@@ -1,6 +1,4 @@
 const inquirer = require("inquirer");
-const connection = require("./db/connection");
-const { connect } = require("./db/connection");
 const dbConnect = require("./db/connection");
 require("console.table");
 
@@ -99,7 +97,7 @@ function startEmployeeTracker() {
 
             case "All Done":
                 console.log("-----Signing Off... Goodbye!!!-----: \n");
-                connection.end();
+                dbConnect.end();
                 break;   
 
             default:
