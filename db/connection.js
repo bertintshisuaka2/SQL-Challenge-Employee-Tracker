@@ -16,3 +16,5 @@ const connection = mysql.createConnection({
 },
 console.log("-----!!Now Connected To 'employeeTracker' Database!!-----")
 );
+
+module.exports = connection;
