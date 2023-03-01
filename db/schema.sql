@@ -2,7 +2,6 @@ DROP DATABASE IF EXISTS employeeTracker;
 CREATE DATABASE employeeTracker;
 USE employeeTracker;
 
-
 CREATE TABLE department (
     id INT AUTO_INCREMENT,
     name VARCHAR(30),
