@@ -18,7 +18,7 @@ const dbConnect = mysql2.createConnection({
     user: 'root',
 
     // Your password
-    password: 'True9MansWorld',
+    password: 'Deborah123',
     database: 'employeeTracker'
 },
 console.log("-----!!Now Connected To 'employeeTracker' Database!!-----")
